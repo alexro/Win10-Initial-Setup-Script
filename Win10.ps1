@@ -193,9 +193,9 @@ Set-NetFirewallProfile -Profile * -Enabled False
 # Set-NetFirewallProfile -Profile * -Enabled True
 
 # Disable Windows Defender
-Write-Host "Disabling Windows Defender..."
-Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware" -Type DWord -Value 1
-Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "WindowsDefender" -ErrorAction SilentlyContinue
+##Write-Host "Disabling Windows Defender..."
+##Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware" -Type DWord -Value 1
+##Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "WindowsDefender" -ErrorAction SilentlyContinue
 
 # Enable Windows Defender
 # Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware"
@@ -441,10 +441,10 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVers
 # Set-ItemProperty -Path "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{35286a68-3c57-41a1-bbb1-0eae73d76c95}\PropertyBag" -Name "ThisPCPolicy" -Type String -Value "Show"
 
 # Add secondary en-US keyboard
-Write-Host "Adding secondary en-US keyboard..."
-$langs = Get-WinUserLanguageList
-$langs.Add("en-US")
-Set-WinUserLanguageList $langs -Force
+##Write-Host "Adding secondary en-US keyboard..."
+##$langs = Get-WinUserLanguageList
+##$langs.Add("en-US")
+##Set-WinUserLanguageList $langs -Force
 
 # Remove secondary en-US keyboard
 # $langs = Get-WinUserLanguageList
